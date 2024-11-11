@@ -21,8 +21,8 @@
     repeating-linear-gradient(180deg, #000, #000 2px, rgb(0 0 0 / 0) 2px, rgb(0 0 0 / 0) 4px),
     linear-gradient(180deg, #007f0c 0%, #004306 100%);
   --width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  --width-mobile: 100vw;  
-  --border: 2px solid #00cc14; 
+  --width-mobile: 100vw;
+  --border: 2px solid #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,7 +42,7 @@
     repeating-linear-gradient(180deg, #000, #000 2px, rgb(0 0 0 / 0) 2px, rgb(0 0 0 / 0) 4px),
     linear-gradient(180deg, #007f0c 0%, #004306 100%);
     --width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-    --width-mobile: 100vw;    
+    --width-mobile: 100vw;   
     --border: 2px solid #00cc14;
   }
 }   
