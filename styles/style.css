@@ -226,7 +226,7 @@
   border-top: var(--border);
 }
 
-.card_content {  
+.card_content {
   margin: 25px;
   font-size: var(--font-size_XL);
   line-height: 117%;
@@ -477,7 +477,7 @@
 .floppy-icon {
   width: 21px;
   margin-right: 8px;
-  color: var(--mixed);  
+  color: var(--mixed);
   mix-blend-mode: difference;
 }
 
