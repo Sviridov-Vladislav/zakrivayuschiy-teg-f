@@ -20,7 +20,7 @@
   align-items: center;
   color: var(--accent-color);
   font-family: 'Helvetica', sans-serif;
-  font-weight: var(--font-normal);
+  font-variation-settings: 'wght' var(--font-normal);
   background-color: var(--bg-color);
   background-image: var(--background-image);
   background-size: cover;
@@ -147,7 +147,7 @@
 
 .card_title {
   padding: 3px 0 3px 10px;
-  font-weight: var(--font-bold);
+  font-variation-settings: "wght" var(--font-bold);
   font-size: var(--font-size_XL);
 }
 
@@ -475,6 +475,7 @@
 }
 
 .floppy-icon {
+  width: 21px;
   margin-right: 8px;
   color: var(--mixed);  
   mix-blend-mode: difference;
@@ -563,5 +564,5 @@ dialog::backdrop {
 
   #dialog {
     padding: 30px 39px;
-  }  
+  }
 }
