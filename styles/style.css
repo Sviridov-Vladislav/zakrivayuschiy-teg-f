@@ -79,11 +79,11 @@
   font-size: var(--font-size_L);
   background-color: transparent;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled {
   opacity: 0.6;
-  transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
@@ -94,24 +94,13 @@
   animation: moving 0.5s infinite alternate ease-in-out;
 }
 
-@keyframes moving {
-  0% {
-    left: -20px;
-  }
-  100% {
-    left: -16px;
-  }
-}
-
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -162,35 +151,35 @@
   object-fit: cover;
 }
 
-.magic_filter {
+.filter-blur {
   filter: blur(0.1rem) brightness(70%) saturate(4);
 }
 
-.filter_doubts {
+.filter-brightness {
   filter: brightness(50%) hue-rotate(180deg);
 }
 
-.filter-I_can {
+.filter-sepia {
   filter: sepia(70%) brightness(60%) invert(0.1);
 }
 
-.ideal_filter {
+.filter-opacity {
   filter: contrast(120%) brightness(70%) opacity(90%);
 }
 
-.family_filter {
+.filter-invert {
   filter: invert(100%);
 }
 
-.strategies_filter {
+.filter-grayscale {
   filter: grayscale(100%);
 }
 
-.anxiety_filter {
+.filter-hue-rotate {
   filter: invert(1) brightness(100%) saturate(60%) hue-rotate(90deg);
 }
 
-.samurai_filter {
+.filter-contrast {
   filter: grayscale(100%) contrast(60%) brightness(90%);
 }
 
@@ -242,7 +231,7 @@
   margin: 0 25px 25px 0;
 }
 
-.button {
+.icon {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -252,6 +241,7 @@
   display: flex;
   align-items: center;
   margin-right: 12px;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -260,7 +250,6 @@
 
 .card__icon-button:focus-visible {
   border: var(--border);
-  transition: border 0.3s ease;
 }
 
 .like-icon:hover .core {
@@ -316,28 +305,8 @@
   animation: scaling 0.3s 1 alternate ease-in 0.1s;
 }
 
-@keyframes scaling {
-  from {
-    transform: scale(1);
-    transform-origin: center;
-  }
-  to {
-    transform: scale(1.5);
-    transform-origin: center;
-  }
-}
-
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s 1 alternate ease-in 0.3s;
-}
-
-@keyframes sparks {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .like-icon:not(.is-liked) .contour {
@@ -345,18 +314,13 @@
   transition: fill 0.1s linear;
 }
 
-.card__like-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 130px;
-  height: 38px;
-  border: var(--border);
-  overflow: hidden;
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.card__like-button::before {
+.button::before {
   content: " ";
   position: absolute;
   top: 0;
@@ -368,37 +332,28 @@
   animation: without_like 0.5s 1 normal ease-in-out;
 }
 
-@keyframes without_like {
-  from {
-    z-index: 0;
-    transform: translateX(0);
-  }
-  to {
-    z-index: 0;
-    transform: translateX(-100%);
-  }
-}
-
-.card__like-button:hover::before {
+.button:hover::before {
   z-index: 0;
   animation: like 0.5s 1 normal ease-in-out;
 }
 
-@keyframes like {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.card__like-button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.card__like-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 38px;
+  border: var(--border);
+  overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
@@ -410,9 +365,10 @@
   font-size: var(--font-size_L);
   line-height: 90%;
   mix-blend-mode: difference;
+  transition: mix-blend-mode 0.3s ease;
 }
 
-.footer {
+.save {
   margin: 50px 0 103px;
   background-color: var(--bg-color);
 }
@@ -426,51 +382,6 @@
   height: 55px;
   border: var(--border);
   overflow: hidden;
-}
-
-.card__floppy-button::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  animation: without_like 0.5s 1 normal ease-in-out;
-}
-
-@keyframes without_like {
-  from {
-    z-index: 0;
-    transform: translateX(0);
-  }
-  to {
-    z-index: 0;
-    transform: translateX(-100%);
-  }
-}
-
-.card__floppy-button:hover::before {
-  z-index: 0;
-  animation: like 0.5s 1 normal ease-in-out;
-}
-
-@keyframes like {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.card__floppy-button:focus {
-  outline: none;
-}
-
-.card__floppy-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
   transition: box-shadow 0.3s ease;
 }
 
@@ -483,7 +394,6 @@
 
 #dialog {
   width: 353px;
-  height: 191px;
   border: var(--border);
   padding: 30px;
   background-color: var(--bg-color);
@@ -526,8 +436,12 @@ dialog::backdrop {
 }
 
 .button_dialog {
+  position: relative;
   border: var(--border);
   background-color: var(--bg-color);
+  padding: 9px 17px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 @media (width <= 375px) {
@@ -544,7 +458,7 @@ dialog::backdrop {
     padding: 4px 10px 6px 10px;
   }  
 
-  .footer {
+  .save {
     margin: 52px 0 100px;
   }
 

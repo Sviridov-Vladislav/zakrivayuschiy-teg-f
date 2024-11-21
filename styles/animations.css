@@ -12,3 +12,52 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: -16px;
+  }
+}
+
+@keyframes scaling {
+  from {
+    transform: scale(1);
+    transform-origin: center;
+  }
+  to {
+    transform: scale(1.5);
+    transform-origin: center;
+  }
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes without_like {
+  from {
+    z-index: 0;
+    transform: translateX(0);
+  }
+  to {
+    z-index: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes like {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -7,7 +7,7 @@
 
 :root.theme-dark {
   --font-family: "Inter-Variable", sans-serif;
-  --second-family: "PressStart2P-Regular", Impact, sans-serif;
+  --second-family: "PressStart2P", "Fantasy", sans-serif;
   --font-normal: 465;
   --font-bold: 785;
   --font-size_L: 14px;
@@ -28,7 +28,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --font-family: "Inter-Variable", sans-serif;
-    --second-family: "PressStart2P-Regular", Impact, sans-serif;
+    --second-family: "PressStart2P", "Fantasy", sans-serif;
     --font-normal: 465;
     --font-bold: 785;
     --font-size_L: 14px;
@@ -49,7 +49,7 @@
 
 :root.theme-light {
   --font-family: "Inter-Variable", sans-serif;
-  --second-family: "PressStart2P-Regular", Impact, sans-serif;
+  --second-family: "PressStart2P", "Fantasy", sans-serif;
   --font-normal: 400;
   --font-bold: 700;
   --font-size_L: 14px;
