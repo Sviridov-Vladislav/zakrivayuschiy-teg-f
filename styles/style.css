@@ -20,11 +20,11 @@
   align-items: center;
   color: var(--accent-color);
   font-family: 'Helvetica', sans-serif;
-  font-variation-settings: 'wght' var(--font-normal);
   background-color: var(--bg-color);
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: 'wght' var(--font-normal);
   min-inline-size: 320px;
   min-block-size: 100dvh;
 }
@@ -38,7 +38,6 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: 25px;
   width: var(--width);
   margin: 100px 0 100px;
   border: var(--border);
@@ -65,11 +64,15 @@
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
+.theme-menu {
+  margin: 25px 0;
+}
+
 .theme-menu__list {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin: 0px 297px 25px 315px;
+  padding-left: clamp(9.6rem, 6.0437rem + 15.1737vw, 19.7rem);
 }
 
 .theme-menu__item {
@@ -82,8 +85,8 @@
   font-size: var(--font-size_L);
   text-transform: uppercase;
   background-color: transparent;
-  cursor: pointer;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .theme-menu__button:disabled {
@@ -140,8 +143,8 @@
 
 .card_title {
   padding: 3px 0 3px 10px;
-  font-variation-settings: "wght" var(--font-bold);
   font-size: var(--font-size_XL);
+  font-variation-settings: "wght" var(--font-bold);
 }
 
 .card_img {
@@ -368,8 +371,8 @@
   font-family: var(--second-family);
   font-size: var(--font-size_L);
   line-height: 90%;
-  mix-blend-mode: difference;
   transition: mix-blend-mode 0.3s ease;
+  mix-blend-mode: difference;
 }
 
 .save {
@@ -442,9 +445,9 @@ dialog::backdrop {
 .button_dialog {
   position: relative;
   border: var(--border);
-  background-color: var(--bg-color);
   padding: 9px 17px;
   overflow: hidden;
+  background-color: var(--bg-color);
   transition: box-shadow 0.3s ease;
 }
 
@@ -453,11 +456,16 @@ dialog::backdrop {
   .header {
     width: var(--width-mobile);
   }
+
+  .theme-menu__list {
+    align-items: center;
+    padding: 0;
+  }
   
   .label {
     right: 13px;
-  }  
-
+  }
+  
   .card_title {
     padding: 4px 10px 6px 10px;
   }  
