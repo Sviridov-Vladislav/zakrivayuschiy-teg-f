@@ -118,12 +118,12 @@
   display: block;
   width: 0;
   border-bottom: var(--border);
+  transition: width 0.3s ease;
   transform: scaleX(0);
 }
 
 .theme-menu__button:focus-visible::after {
   width: 100%;
-  transition: width 0.3s ease;
   transform: scaleX(1);
 }
 
@@ -286,7 +286,7 @@
 
 .like-icon:active .main-body {
   fill: var(--sparks);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .sparks {
@@ -305,7 +305,7 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--sparks);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .heart {
@@ -376,7 +376,7 @@
 }
 
 .save {
-  margin: 50px 0 103px;
+  margin-bottom: 103px;
   background-color: var(--bg-color);
 }
 
@@ -408,7 +408,6 @@
 
 #dialog[open] {
   display: grid;
-  grid-template-rows: 63px 1fr;
   gap: 30px;
 }
 
@@ -465,13 +464,13 @@ dialog::backdrop {
   .label {
     right: 13px;
   }
-  
+
   .card_title {
     padding: 4px 10px 6px 10px;
   }  
 
   .save {
-    margin: 52px 0 100px;
+    margin: 2px 0 100px;
   }
 
   .card__floppy-button {
